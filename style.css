@@ -1,0 +1,130 @@
+:root {
+    --color-primary: #2d1b6b;
+    /* Deep Purple/Blue */
+    --color-text-dark: #1a1a1a;
+    --color-text-light: #ffffff;
+    --color-bg-light: #f8f9fa;
+    --color-bg-dark: #1b0e46;
+
+    /* Fonts & Accessibility spaces */
+    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.logo {
+    width: 85px;
+    height: auto;
+}
+
+nav {
+    padding: 1px 10px;
+    background: linear-gradient(89.72deg, #000E38 0.22%, #3F186A 52.52%);
+
+}
+
+.inner__nav_fix {
+    background: linear-gradient(89.72deg, #1e0b33 0.22%, #2f1649d8 52.52%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1px 20px;
+}
+
+.register__btn {
+    background-color: var(--color-text-light);
+    color: var(--color-bg-dark);
+    border: none;
+    padding: 0.9rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.inner__nav_scroll {
+    position: sticky;
+    top: 500px;
+    padding: 20px 10px;
+    background: var(--color-bg-light);
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    /* align-items: center; */
+    /* position: relative; */
+}
+
+.scroll__logo {
+    width: 155px;
+    height: 150px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+}
+
+
+.register__btn-scroll {
+    background-color: var(--color-text-light);
+    color: var(--color-bg-dark);
+    border: 2.5px solid var(--color-bg-dark);
+    /* padding: 0.9rem 2rem; */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    width: 150px;
+    text-transform: uppercase;
+    /* padding: 9px 1px; */
+    display: grid;
+    align-items: center;
+    grid-template-columns: 25% 75%;
+    position: relative;
+}
+
+.register__btn__arrow {
+    background: linear-gradient(89.72deg, #000E38 0.22%, #3F186A 52.52%) !important;
+    color: #ffffff;
+    padding: 10px 1px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.register__btn-scroll::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    background: red;
+    z-index: 111;
+}
+
+.register__btn-scroll:hover::before {
+    width: 100%;
+}
+
+
+.register__btn__text {
+    color: #000E38;
+    padding: 8px;
+}
+
+
+.main-content {
+    height: 300vh;
+}
