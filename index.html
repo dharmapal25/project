@@ -7,80 +7,223 @@
     <title>Premier Schools Exhibition</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <header>
         <nav>
             <div class="inner__nav_fix">
-                <img src="../assets/logo.png" alt="logo" class="logo">
-                <button class="register__btn">Register Now</button>
+                <img src="assets/logo.png" alt="Premier Schools Exhibition logo" class="logo">
+                <a href="#register" class="register__btn">
+                    <span aria-hidden="true">&#8599;</span>
+                    Register Now
+                </a>
             </div>
 
             <div class="inner__nav_scroll">
-                <img src="../assets/logo.png" alt="logo" class="scroll__logo">
-                <div class="register__btn-scroll">
-                    <div class="register__btn__arrow">-></div>
+                <img src="assets/logo.png" alt="Premier Schools Exhibition logo" class="scroll__logo">
+                <a href="#register" class="register__btn-scroll">
+                    <div class="register__btn__arrow" aria-hidden="true">&#8599;</div>
                     <span class="register__btn__text">Register Now</span>
-                </div>
+                </a>
             </div>
         </nav>
     </header>
 
-
-    <main class="main-content">
+    <main class="main-content" id="main">
 
         <section class="hero">
             <div class="hero__container">
                 <div class="hero__content">
-                    <h2>Discover Gurugram's</h2>
-                    <h1> Top 30+ Schools</h1>
-                    <span>all in one place</span>
+                    <span class="gurugram__text">Discover Gurugram's</span>
+                    <span class="school__text"> Top 30+ Schools</span>
+                    <span class="school__one">all in one place</span>
                 </div>
-
                 <div class="hero__table">
-                    <table border="2">
-                        <th>
-                            <tr>one</tr>
-                            <tr>two</tr>
-                        </th>
-                    </table>
+                    <div class="event-badge" role="text" aria-label="Event location and date summary">
+                        <div class="event-badge__block event-badge__block--location">
+                            <span class="event-badge__title">Apparel House,</span>
+                            <span class="event-badge__subtitle">Sec 44, Gurugram</span>
+                        </div>
+                        <div class="event-badge__divider" aria-hidden="true"></div>
+                        <div class="event-badge__block event-badge__block--date">
+                            <span class="event-badge__title">2-3 August 2025</span>
+                            <span class="event-badge__subtitle">Sat-Sun | 10AM - 6PM</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <div class="images__container">
                 <div class="image__columns">
                     <div class="img__col_1">
-                        <img src="" alt="">
+                        <div class="img__scroll">
+                            <img src="assets/PSE Students/15.png" alt="Student reading book">
+                            <img src="assets/PSE Students/18.png" alt="Student in school uniform">
+                            <img src="assets/PSE Students/15.png" alt="Student reading book">
+                            <img src="assets/PSE Students/18.png" alt="Student in school uniform">
+                        </div>
                     </div>
                     <div class="img__col_2">
-                        <img src="" alt="">
+                        <div class="img__scroll">
+                            <img src="assets/PSE Students/16.png" alt="Young child smiling">
+                            <img src="assets/PSE Students/21.png" alt="Student activity moment">
+                            <img src="assets/PSE Students/16.png" alt="Young child smiling">
+                            <img src="assets/PSE Students/21.png" alt="Student activity moment">
+                        </div>
                     </div>
                     <div class="img__col_3">
-                        <img src="" alt="">
+                        <div class="img__scroll">
+                            <img src="assets/PSE Students/17.png" alt="Child playing football">
+                            <img src="assets/PSE Students/24.png" alt="Happy school student">
+                            <img src="assets/PSE Students/17.png" alt="Child playing football">
+                            <img src="assets/PSE Students/24.png" alt="Happy school student">
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <aside class="enquiry" >
+            <aside class="enquiry" id="register">
                 <div class="form__container">
                     <h1>Enquiry Now</h1>
-                    <form>
-                        <input type="text" placeholder="Parent's Name">
-                        <input type="number" placeholder="Phone number">
-                        <textarea name="" id="">  </textarea>
-                        <button>Submit</button>
+                    <form class="form__side" aria-label="Enquiry form">
+                        <label>
+                            <span>Parent's Name</span>
+                            <input type="text" placeholder="Parent's Name" class="form__input">
+                        </label>
+                        <label>
+                            <span>Phone number</span>
+                            <input type="tel" placeholder="Phone number" class="form__input">
+                        </label>
+                        <label>
+                            <span>Grade</span>
+                            <textarea class="form__input" placeholder="Which grade are you looking for?"></textarea>
+                        </label>
+                        <button type="submit" class="submit__btn">
+                            <span aria-hidden="true">&#8599;</span>
+                            Submit
+                        </button>
                     </form>
                 </div>
 
             </aside>
+        </section>
 
+        <section class="stats" aria-label="exhibition numbers">
+            <div>
+                <strong>1 Million+</strong>
+                <span>Trusted Parents</span>
+            </div>
+            <div>
+                <strong>22+ Years</strong>
+                <span>of Legacy</span>
+            </div>
+            <div>
+                <strong>500+</strong>
+                <span>Participating Schools</span>
+            </div>
+            <div>
+                <strong>17 Cities</strong>
+                <span>Across the Globe</span>
+            </div>
+        </section>
+
+        <section class="school-logos">
+            <h2>Participating Schools</h2>
+            <div class="logo__slider">
+                <div class="logo__row">
+                    <span>Harrow International</span>
+                    <span>Shrewsbury</span>
+                    <span>King's College India</span>
+                    <span>Woodstock School</span>
+                    <span>Aga Khan Academy</span>
+                    <span>TISB</span>
+                    <span>Harrow International</span>
+                </div>
+                <div class="logo__row logo__row_right">
+                    <span>TISB</span>
+                    <span>Aga Khan Academy</span>
+                    <span>Woodstock School</span>
+                    <span>King's College India</span>
+                    <span>Shrewsbury</span>
+                    <span>Harrow International</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="choose-school">
+            <h2>Choose the School That Fits You Best</h2>
+            <div class="choose__cards">
+                <article>
+                    <img src="assets/PSE Students/19.png" alt="Early learning student">
+                    <h3>Pre-Schools & Early Learning Centres</h3>
+                    <p>Nurturing foundational skills for toddlers and pre-primary children.</p>
+                </article>
+                <article>
+                    <img src="assets/PSE Students/20.png" alt="K12 school student">
+                    <h3>K-12 CBSE Day Schools</h3>
+                    <p>Complete schooling options from Kindergarten to Grade 12.</p>
+                </article>
+                <article>
+                    <img src="assets/PSE Students/22.png" alt="Modern school learning">
+                    <h3>Heritage to New-Age Schools</h3>
+                    <p>Traditional values with modern teaching and future-ready learning.</p>
+                </article>
+                <article>
+                    <img src="assets/PSE Students/26.png" alt="International curriculum student">
+                    <h3>International Curriculum Schools</h3>
+                    <p>Explore IB, Cambridge, Finnish and other global curricula.</p>
+                </article>
+            </div>
+            <div class="mobile-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <section class="appointment">
+            <div>
+                <p>Exciting Opportunities for Parents!</p>
+                <h2>Pre-schedule Your<br>School Appointments</h2>
+                <span>To Avoid Rush</span>
+                <a href="#register" class="pre-btn">
+                    <span aria-hidden="true">&#8599;</span>
+                    Pre-schedule Now
+                </a>
+            </div>
+        </section>
+
+        <section class="exhibition">
+            <h2>What Makes This Exhibition a Must-Visit</h2>
+            <div class="exhibition__slider" tabindex="0">
+                <article>
+                    <span>01</span>
+                    <h3>Interact Directly with School Heads</h3>
+                    <p>Get answers straight from the experts.</p>
+                </article>
+                <article>
+                    <span>02</span>
+                    <h3>Compare Curriculum & Pedagogy</h3>
+                    <p>Understand the differences between CBSE, ICSE, IB, Cambridge and more.</p>
+                </article>
+                <article>
+                    <span>03</span>
+                    <h3>Get Exclusive Fee Structures & Offers</h3>
+                    <p>Access transparent information and available offers.</p>
+                </article>
+                <article>
+                    <span>04</span>
+                    <h3>Explore School Offerings</h3>
+                    <p>Preview infrastructure, teaching methodology and culture.</p>
+                </article>
+            </div>
         </section>
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
-        <!-- Office addresses, social media links and copyright info -->
+       
     </footer>
 </body>
 
