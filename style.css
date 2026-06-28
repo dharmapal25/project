@@ -463,8 +463,11 @@ textarea.form__input {
     background: linear-gradient(270deg, #EAD7FF 45.09%, #DEC1FF 100%);
     background: url("assets/appointment.jpg") right center / contain no-repeat;
     
+}
 
-
+.appointment div {
+    display: flex;
+    flex-direction: column;
 }
 
 .appointment p,
@@ -703,51 +706,521 @@ textarea.form__input {
 
 }
 
+
+/* -----exhibition------- */
+
 .exhibition {
-    padding: 62px 6% 82px;
+    position: relative;
     overflow: hidden;
-    color: #ffffff;
-    background: linear-gradient(180deg, var(--purple), var(--dark-blue));
+    padding: 80px 0 160px;
+    background: linear-gradient(180deg,#43156f 0%,#19134d 100%);
 }
 
-.exhibition__slider {
+.exhibition__container{
+    width:min(1320px,92%);
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+.exhibition h2{
+    text-align:center;
+    color:#fff;
+    font-size:42px;
+    font-weight:700;
+    margin-bottom:50px;
+}
+
+/*=============================
+        SLIDER
+==============================*/
+
+.exhibition__slider{
+
+    display:flex;
+    gap:22px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    scroll-behavior:smooth;
+
+}
+
+.exhibition__slider::-webkit-scrollbar{
+    display:none;
+}
+
+/*=============================
+        CARD
+==============================*/
+
+.exhibition__card{
+
+    min-width:255px;
+    background:#F4E5FF;
+    border-radius:12px;
+    padding:8px 13px;
+    transition:.35s;
+    cursor:pointer;
+
+}
+
+.card__icon{
+
+    width:58px;
+    height:58px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:22px;
+
+}
+
+.card__icon img{
+
+    width:44px;
+
+}
+
+.exhibition__card h3{
+
+    color:#26164C;
+    font-size:20px;
+    line-height:1.35;
+    margin-bottom:16px;
+
+}
+
+.exhibition__card p{
+
+    color:#666;
+    font-size:14px;
+    line-height:1.7;
+
+}
+
+/*=============================
+    BUTTONS
+==============================*/
+
+.slider__controls{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:16px;
+    margin-top:40px;
+
+}
+
+.slider__btn{
+
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    border:2px solid #fff;
+    background:transparent;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+.slider__btn:hover{
+
+    background:#fff;
+    color:#2E165C;
+
+}
+
+/*=============================
+        WAVE
+==============================*/
+
+.wave{
+
+    position:absolute;
+    bottom:-2px;
+    left:0;
+    width:100%;
+    line-height:0;
+
+}
+
+.wave svg{
+
+    width:100%;
+    height:160px;
+    display:block;
+
+}
+
+.wave path{
+
+    fill:#fff;
+
+}
+
+.reviews-section {
+    padding: 80px 6%;
+    background: #f7f3ff;
+}
+
+.reviews-section__container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.reviews-section__title,
+.gallery-section__title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 34px;
+    color: #241441;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(220px, 1fr));
+    gap: 22px;
+}
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    min-height: 265px;
+    background: #fff;
+    box-shadow: 0 18px 35px rgba(36, 20, 72, 0.1);
+}
+
+.video-card__thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-card__overlay {
+    position: absolute;
+    inset: 0;
     display: flex;
-    gap: 18px;
-    width: max-content;
-    animation: cardMove 15s ease-in-out infinite alternate;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 14px;
+    padding: 18px;
+    background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.52));
 }
 
-.exhibition__slider:hover,
-.exhibition__slider:focus {
-    animation-play-state: paused;
-}
-
-.exhibition article {
-    width: 270px;
-    min-height: 225px;
-    padding: 24px;
-    border-radius: 8px;
-    background: var(--soft-purple);
-    color: var(--text);
-}
-
-.exhibition article span {
-    display: block;
-    margin-bottom: 22px;
-    color: #8b48b8;
-    font-size: 28px;
-    font-weight: 800;
-}
-
-.exhibition h3 {
-    margin-bottom: 12px;
+.video-card__play-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 255, 255, 0.92);
+    color: #2a0f56;
     font-size: 18px;
-    line-height: 1.35;
+    cursor: pointer;
 }
 
-.footer {
-    min-height: 90px;
-    background: linear-gradient(90deg, var(--dark-blue), var(--purple));
+.video-card__play-icon {
+    display: inline-block;
+    transform: translateX(2px);
+}
+
+.video-card__label {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+/* .gallery-section {
+    padding: 80px 6% 110px;
+    background: #fff;
+}
+
+.gallery-section__container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+.gallery-wrap {
+    display: grid;
+    justify-items: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(36, 20, 72, 0.08);
+}
+
+.gallery-item__img {
+    width: 100%;
+    height: 385px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item__img:hover {
+    transform: scale(1.04);
+} */
+/* @media (max-width: 1000px) {
+    .reviews-grid,
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 670px) {
+    .reviews-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+} */
+
+/* ==========================================================================
+   CYLINDER PATTERN SCROLLABLE GALLERY WITH SHAPE MASKS
+   ========================================================================== */
+.gallery-wrapper {
+    padding: 60px 0;
+    background-color: #ffffff;
+    position: relative;
+    width: 100%;
+}
+
+.gallery-wrapper__title {
+    text-align: center;
+    color: #1b0e46;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+/* Master relative container wrapping masks and the slide layer track together */
+.gallery-container {
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    overflow: hidden; /* Clips horizontal overflow edges cleanly */
+}
+
+/* Absolute Mask Layers forming the curved circle boundaries */
+.gallery-container__mask {
+    position: absolute;
+    left: -10%;
+    width: 120%; /* Extra width matches layout curvature expansion handles */
+    height: 60px;
+    background-color: #ffffff; /* Matches white background screen bleed */
+    z-index: 10;
+    pointer-events: none; /* Allows mouse swipes right through the masks */
+}
+
+/* Top Concave Curve Mask */
+.gallery-container__mask--top {
+    top: -5px;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%; /* Creates deep downward arch */
+}
+
+/* Bottom Convex Curve Mask */
+.gallery-container__mask--bottom {
+    bottom: -5px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0; /* Creates deep upward arch */
+}
+
+/* The actual scrollable row slider component */
+.gallery-track {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto; /* Activates physical swipe / scroll mechanics */
+    scroll-snap-type: x mandatory;
+    padding: 40px 40px; /* Pads images inside masking overlay heights */
+    scrollbar-width: none; /* Hides horizontal system scrollbars on Firefox */
+}
+
+/* Hides scrollbars on Chrome, Safari, and Opera web viewports */
+.gallery-track::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-track__item {
+    flex: 0 0 44%; /* Displays roughly 2.3 images on large screens simultaneously */
+    scroll-snap-align: center;
+    height: 380px;
+    overflow: hidden;
+    background-color: #eaeaea;
+}
+
+.gallery-track__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT SHIFTS
+   ========================================================================== */
+@media (max-width: 992px) {
+    .gallery-track__item {
+        flex: 0 0 65%; /* Shows bigger single blocks on tablet previews */
+        height: 300px;
+    }
+    .gallery-container__mask {
+        height: 45px; /* Compresses curves to match scale proportions */
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-track__item {
+        flex: 0 0 85%; /* Near full-width viewport snap profiles for smartphones */
+        height: 240px;
+    }
+    .gallery-container__mask {
+        height: 30px;
+        width: 130%;
+        left: -15%;
+    }
+    .gallery-wrapper__title {
+        font-size: 1.6rem;
+    }
+}
+
+
+.footer{
+
+    background:linear-gradient(180deg,#43156f,#25144f);
+
+}
+
+.footer__container{
+
+    width:min(1320px,92%);
+    margin:auto;
+    display:grid;
+    grid-template-columns:110px repeat(4,1fr);
+    gap:25px;
+    padding:35px 0;
+
+}
+
+.footer__logo{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.footer__logo img{
+
+    width:75px;
+
+}
+
+.footer__box{
+
+    display:flex;
+    gap:15px;
+    color:#fff;
+    padding:16px;
+    border-radius:8px;
+
+}
+
+.footer__icon{
+
+    width:38px;
+    height:38px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#ffffff18;
+    border-radius:50%;
+
+}
+
+.footer__icon img{
+
+    width:18px;
+
+}
+
+.footer__box h4{
+
+    font-size:15px;
+    margin-bottom:8px;
+
+}
+
+.footer__box p{
+
+    font-size:13px;
+    line-height:1.7;
+    color:#ddd;
+
+}
+
+.footer__social{
+
+    color:#fff;
+
+}
+
+.footer__social h4{
+
+    margin-bottom:15px;
+
+}
+
+.social__icons{
+
+    display:flex;
+    gap:12px;
+
+}
+
+.social__icons a{
+
+    width:42px;
+    height:42px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:8px;
+    transition:.3s;
+
+}
+
+.social__icons a:hover{
+
+    background:#fff;
+
+}
+
+.social__icons img{
+
+    width:20px;
+
+}
+
+.copyright{
+
+    text-align:center;
+    color:#ddd;
+    font-size:13px;
+    padding:18px 10px;
+    border-top:1px solid rgba(255,255,255,.15);
+
 }
 
 @keyframes heroUp {
@@ -819,6 +1292,8 @@ textarea.form__input {
         transform: translateX(-250px);
     }
 }
+
+
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -897,7 +1372,7 @@ textarea.form__input {
 
     .appointment {
         background:
-            linear-gradient(90deg, rgba(229, 203, 255, 0.96), rgba(229, 203, 255, 0.84)),
+            linear-gradient(90deg, #e5cbfff5, #e5cbffd6),
             url("assets/PSE Students/23.png") right center / contain no-repeat,
             #e8d2ff;
     }
